@@ -16,7 +16,8 @@ origins = [
     "http://localhost:8080",
     "http://localhost:3000",
     "https://p2plending.netlify.com/",
-    "https://p2plending.netlify.com/loans/*"
+    "https://p2plending.netlify.com/loans/*",
+    "*"
 ]
 
 app.add_middleware(
