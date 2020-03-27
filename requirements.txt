@@ -1,0 +1,8 @@
+uvicorn==0.11.3
+numpy==1.18.2
+pickleshare==0.7.5
+pandas==1.0.3
+numpy==1.18.2
+fastapi==0.52.0
+catboost==0.22
+pydantic==1.4
