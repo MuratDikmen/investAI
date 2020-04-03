@@ -50,7 +50,6 @@ class Data(BaseModel):
     percent_bc_gt_75: float
     num_rev_accts: float
     mths_since_last_delinq: float
-    int_rate: float
 
 
 @app.post("/predict")
@@ -78,8 +77,7 @@ def predict(data: Data):
                                     "mo_sin_rcnt_rev_tl_op",
                                     "percent_bc_gt_75",
                                     "num_rev_accts",
-                                    "mths_since_last_delinq",
-                                    "int_rate"])
+                                    "mths_since_last_delinq"])
     prediction = model.predict_proba(dfd)[0][1]
     return prediction
     # return {"prediction": int(prediction[0])}
