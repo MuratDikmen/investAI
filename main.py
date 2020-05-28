@@ -58,7 +58,7 @@ class Data(BaseModel):
 def predict(data: Data):
     arr = []
     for key, value in data:
-        if key != = loan_id:
+        if key != loan_id:
         arr.append(value)
         # arr.append(value)
     # ja = [[35000.0, 4.0, "60 months", 3.0, 2.0, 65.1, 19167.0, 74.7, 3.0,
