@@ -1,4 +1,6 @@
 import pickle
+
 shap_values = pickle.load(open('shap.pickle', 'rb'))
 
-print(shap_values)
+formatted = eval(shap_values)
+print(formatted[1])
