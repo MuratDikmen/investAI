@@ -84,7 +84,8 @@ def predict(data: Data):
                                    "mths_since_last_delinq"])
     prediction = model.predict_proba(df)[0][1]
     # shap_vals = shap_values[data["loan_id"]]
-    shap_vals = "replace with shap values"
+    shap_vals = shap_values[0]
+    print(data)
     data_to_return = {"prediction": prediction, "shap_vals": shap_vals}
     return data_to_return
     # return prediction
