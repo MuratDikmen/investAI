@@ -29,7 +29,7 @@ app.add_middleware(
 )
 
 model = pickle.load(open('model.pickle', 'rb'))
-shap_values = pickle.load(open('shap_values.pickle', 'rb'))
+shap_values = pickle.load(open('shap.pickle', 'rb'))
 
 
 class Data(BaseModel):
