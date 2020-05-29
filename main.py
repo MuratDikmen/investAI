@@ -58,9 +58,9 @@ class Data(BaseModel):
 def predict(data: Data):
     arr = []
     for key, value in data:
-        if key != loan_id:
+        if key != "loan_id":
             arr.append(value)
-        # arr.append(value)
+    # arr.append(value)
     # ja = [[35000.0, 4.0, "60 months", 3.0, 2.0, 65.1, 19167.0, 74.7, 3.0,
     #        56633.0, 0.0, 10.0, 705.0, 540.0, 4.0, 42.9, 15.0, 226.0, 23.4]]
     ja = [arr]
@@ -83,7 +83,7 @@ def predict(data: Data):
                                    "num_rev_accts",
                                    "mths_since_last_delinq"])
     prediction = model.predict_proba(df)[0][1]
-    shap_vals = shap_values[loan_id]
-    data = {"prediction": prediction, "shap_vals": shap_vals}
-    return data
-    # return prediction
+    # shap_vals = shap_values[data.loan_id]
+    # data_to_return = {"prediction": prediction, "shap_vals": shap_vals}
+    # return data_to_return
+    return prediction
