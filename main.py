@@ -83,7 +83,7 @@ def predict(data: Data):
                                    "num_rev_accts",
                                    "mths_since_last_delinq"])
     prediction = model.predict_proba(df)[0][1]
-    # shap_vals = shap_values[data.loan_id]
-    # data_to_return = {"prediction": prediction, "shap_vals": shap_vals}
-    # return data_to_return
-    return prediction
+    shap_vals = shap_values[data["loan_id"]]
+    data_to_return = {"prediction": prediction, "shap_vals": shap_vals}
+    return data_to_return
+    # return prediction
