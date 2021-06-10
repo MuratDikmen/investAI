@@ -12,7 +12,7 @@ cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
 entrypoints==0.3
-fastapi==0.52.0
+fastapi==0.65.2
 graphviz==0.13.2
 gunicorn==20.0.4
 h11==0.9.0
